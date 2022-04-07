@@ -8,7 +8,7 @@ const sortedAndRotatedArray = (k,array) => {
     const leftSearch = binarySearch(k,leftSortedArray);
     const rightSearch = binarySearch(k,rightSortedArray) + leftSortedArray.length;
 
-    return leftSearch || rightSearch;
+    return leftSearch || rightSearch || -1;
 }
 
 const binarySearch = (k,array) => {
@@ -45,5 +45,5 @@ const findMinimumElement = (array) => {
 }
 
 const array = [3,4,5,1,2]
-const k = 1;
+const k = 6;
 console.log(sortedAndRotatedArray(k,array))
